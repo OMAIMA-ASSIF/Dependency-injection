@@ -1,0 +1,2 @@
+net.omaima.dao.DaoImpl
+net.omaima.metier.MetierImpl
