@@ -1,6 +1,5 @@
-package net.omaima.net.omaima.ext;
+package ext;
 
-import net.omaima.dao.DaoImpl;
 import net.omaima.dao.IDao;
 
 public class DaoImplV2 implements IDao {

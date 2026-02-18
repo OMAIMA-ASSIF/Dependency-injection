@@ -1,8 +1,7 @@
 package net.omaima.pres;
 
-import net.omaima.dao.DaoImpl;
 import net.omaima.metier.MetierImpl;
-import net.omaima.net.omaima.ext.DaoImplV2;
+import ext.DaoImplV2;
 
 public class Pres1 {
     public static void main(String[] args) {
