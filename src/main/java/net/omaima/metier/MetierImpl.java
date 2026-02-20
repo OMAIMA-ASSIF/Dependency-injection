@@ -1,8 +1,12 @@
 package net.omaima.metier;
 
 import net.omaima.dao.IDao;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component("metier")
 public class MetierImpl implements IMetier {
+    @Autowired //injection automatique
     private IDao dao; //Couplage faible
 
     //Pour injecter dans l attribut dao
