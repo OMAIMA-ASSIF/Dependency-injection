@@ -3,7 +3,7 @@ package net.omaima.dao;
 
 import org.springframework.stereotype.Component;
 
-@Component("dao");
+@Component("dao")
 public class DaoImpl implements IDao {
 
     @Override
