@@ -35,14 +35,24 @@ The project is structured into several layers:
 ## 3. The 4 Dependency Injection Methods
 
 ### I. Static Injection (Manual Coupling)
-The simplest method, performed directly in the source code. It can be achieved via constructor injection or setter injection.
+Static injection involves linking components directly in the code. This can be done in two ways:
+
+1.  **Via Constructor**: Passing the dependency when the object is created.
+2.  **Via Setter**: Injecting the dependency after the object is instantiated using a setter method.
 
 **Code ([Pres1.java](src/main/java/net/omaima/pres/Pres1.java)):**
 ```java
 public class Pres1 {
     public static void main(String[] args) {
-        DaoImplV2 dao = new DaoImplV2(); // Static instantiation
-        MetierImpl metier = new MetierImpl(dao); // Injection via constructor
+        DaoImplV2 dao = new DaoImplV2(); 
+        
+        // Option 1: Constructor Injection
+        MetierImpl metier = new MetierImpl(dao); 
+        
+        // Option 2: Setter Injection
+        // MetierImpl metier = new MetierImpl();
+        // metier.setDao(dao);
+        
         System.out.println(metier.calcul());
     }
 }
@@ -72,7 +82,11 @@ Objects (Beans) are declared and wired in a `config.xml` file. Spring reads this
 ```xml
 <bean id="dao" class="net.omaima.ext.DaoImplV2"></bean>
 <bean id="metier" class="net.omaima.metier.MetierImpl">
+    <!-- Option 1: Constructor Injection -->
     <constructor-arg ref="dao"></constructor-arg>
+    
+    <!-- Option 2: Setter Injection (using <property>) -->
+    <!-- <property name="dao" ref="dao" /> -->
 </bean>
 ```
 
