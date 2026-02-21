@@ -115,9 +115,8 @@ public class MetierImpl implements IMetier {
     @Qualifier("dao2") // Selects a specific bean implementation
     private IDao dao;
 
-    // Alternatively, using Constructor Injection with @Autowired
+    //using Constructor Injection
     /*
-    @Autowired
     public MetierImpl(@Qualifier("dao2") IDao dao) {
         this.dao = dao;
     }
@@ -132,3 +131,4 @@ We call this **Inversion of Control** because the developer no longer controls t
 
 > [!WARNING]
 > When using other Spring modules (Data, Security, etc.), precision in choosing annotations is critical as they trigger specific technical behaviors within the framework.
+
