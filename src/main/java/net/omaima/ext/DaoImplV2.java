@@ -2,8 +2,9 @@ package net.omaima.ext;
 
 import net.omaima.dao.IDao;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component("dao2")
+@Repository("dao2")
 public class DaoImplV2 implements IDao {
 
     @Override

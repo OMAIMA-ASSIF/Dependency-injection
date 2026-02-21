@@ -7,7 +7,7 @@ public class Pres1 {
     public static void main(String[] args) {
         DaoImplV2 dao = new DaoImplV2();
         MetierImpl metier = new MetierImpl(dao);
-        //metier.setDao(dao); //Injection des dependances via le setter
+        //metier.setDao(dao); //Injection des dependances via le setter avec metier = new MetierImpl();
         System.out.println(metier.calcul());
     }
 }
