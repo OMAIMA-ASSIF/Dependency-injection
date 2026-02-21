@@ -4,18 +4,20 @@ This project demonstrates the implementation of fundamental software engineering
 
 ---
 
-## 1. Core Design Principles
+## 1. Core Design Principle: Open/Closed Principle (OCP)
 
-### A. Open/Closed Principle (OCP)
-Software entities should be **open for extension** but **closed for modification**. In this project, we can add new implementations of the DAO layer without ever modifying the existing Business Logic (Metier) layer.
+The "Open/Closed Principle" states that software entities should be **open for extension** but **closed for modification**. In this project, this principle is achieved through two key pillars:
 
-### B. Loose Coupling
-Loose coupling involves reducing dependencies between classes by using **Interfaces** instead of concrete classes. This allows one implementation to be swapped for another with zero impact on the consuming code.
+### A. Loose Coupling (Interfaces vs. Classes)
+Loose coupling involves reducing dependencies between classes by using **Interfaces** instead of concrete classes. This allows the application to be "open for extension" because we can add new behaviors without changing existing ones.
 
 ```java
 // Example of loose coupling in MetierImpl
 private IDao dao; // The object depends on the interface, not a specific class
 ```
+
+### B. Dependency Injection (DI)
+Dependency Injection is the mechanism that allows us to provide an object with its dependencies. It is the practical implementation of the Open/Closed Principle, as it allows us to swap implementations at runtime (or configuration time) without modifying the source code of the consumer.
 
 ---
 
