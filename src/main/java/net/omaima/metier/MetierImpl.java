@@ -9,14 +9,14 @@ import org.springframework.stereotype.Component;
 public class MetierImpl implements IMetier {
 
 
-    @Autowired //injection automatique
-    @Qualifier("dao2")
+    //@Autowired //injection automatique
+    //@Qualifier("dao2")
     private IDao dao; //Couplage faible
 
     //Pour injecter dans l attribut dao
     //un objet d une classe qui implemennte l interface IDao
     //au moment de l'instantiation   (recommende)
-    public MetierImpl(IDao dao) {
+    public MetierImpl(@Qualifier("dao2") IDao dao) {
         this.dao = dao;
     }
 

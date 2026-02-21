@@ -4,10 +4,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
                            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="dao" class="net.omaima.dao.DaoImplV2" />
+    <bean id="dao" class="net.omaima.ext.DaoImplV2" > </bean>
 
     <bean id="metier" class="net.omaima.metier.MetierImpl">
-        <property name="dao" ref="dao" />
+        <!-- <property name="dao" ref="dao" />  version XML avec setters-->
+        <constructor-arg ref="dao"></constructor-arg> <!--version XML avec constructeur-->
     </bean>
 
 
