@@ -110,11 +110,18 @@ The modern approach. Spring scans packages to find annotated classes and perform
 ```java
 @Service("metier")
 public class MetierImpl implements IMetier {
+    
+    @Autowired // Auto-wires the dependency
+    @Qualifier("dao2") // Selects a specific bean implementation
     private IDao dao;
 
+    // Alternatively, using Constructor Injection with @Autowired
+    /*
+    @Autowired
     public MetierImpl(@Qualifier("dao2") IDao dao) {
         this.dao = dao;
     }
+    */
 }
 ```
 
