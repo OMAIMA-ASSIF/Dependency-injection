@@ -1,4 +1,4 @@
-Dependency Injection (TP1)
+## Dependency Injection (TP1)
 
 This project demonstrates the implementation of fundamental software engineering principles to create flexible, maintainable, and scalable applications. The focus is on **Loose Coupling**, the **Open/Closed Principle (OCP)**, and **Inversion of Control (IoC)** via **Dependency Injection (DI)**.
 
@@ -131,5 +131,6 @@ We call this **Inversion of Control** because the developer no longer controls t
 
 > [!WARNING]
 > When using other Spring modules (Data, Security, etc.), precision in choosing annotations is critical as they trigger specific technical behaviors within the framework.
+
 
 
